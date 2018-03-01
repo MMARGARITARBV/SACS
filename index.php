@@ -11,14 +11,14 @@
     <link rel="shortcut icon" type="image/png" href="https://sacs.sextaplanta.com/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-   
+
     <style>
-        
+
         #map {
-            width: 900px;
+/*            width: 900px;*/
             height: 250px;
         }
-       
+
     </style>
 
 </head>
@@ -81,27 +81,12 @@
                                 </li>
                             </ul>
 
-                        </div><!--/.nav-collapse -->
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-8 col-md-9 ">
                 <div id="map" class="container page-header"> </div>
-
-                <script>
-                    var map;
-                    function initMap() {
-                        var oficsacs = {lat: 36.718982, lng: -4.419879};
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 15,
-                            center: oficsacs
-                        });
-                        var marker = new google.maps.Marker({
-                            position: oficsacs,
-                            map: map
-                        });
-                    }
-                </script>
                 <div class="container page-header">  
                     <table id="tablaGestorias" class="table table-striped">
                     </table>
@@ -115,25 +100,12 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src=js/bootstrap.min.js></script>
 
-
     </div>
 
-<script async defer
+    <script async defer 
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA0L6InYkKSiGqSqTmoJrViwYOePA8_Cs&callback=initMap">
-    </script>
-
-    <script>
-
-        $("#mostrarGestorias").click(function () {
-            $.ajax({
-                url: "gestor.php", success: function (result) {
-                    $("#tablaGestorias").html(result);
-                }
-            });
-        });
-
-    </script>
-
+    </script> 
+    <script src= "js/main.js"> </script>           
 </body>
 </html>
 
